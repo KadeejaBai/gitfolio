@@ -76,6 +76,7 @@ Whether I’m architecting a high-scale commerce platform or navigating a hidden
                   <ul className="space-y-2 text-cyan-200/70">
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Always learning</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Problem-solving</li>
+                    <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Communication</li>
                     <li className="flex items-center gap-2"><span className="text-fuchsia-500">›</span> Commerce Journey Expert</li>
                   </ul>
                 </div>
