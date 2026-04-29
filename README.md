@@ -1,6 +1,6 @@
 # ⚡ GITFOLIO
 
-A beginner-friendly developer portfolio template with a retro-futuristic cyberpunk aesthetic. Fork it, customize it, deploy it - no design skills required, (promise!)
+A beginner-friendly developer portfolio template with a sleek monochrome dark theme. Fork it, customize it, deploy it - no design skills required, (promise!)
 
 ![Gitfolio Preview](https://img.shields.io/badge/Next.js-16.0.10-black?style=flat-square&logo=next.js) ![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38B2AC?style=flat-square&logo=tailwind-css) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript)
 
@@ -34,49 +34,38 @@ Open [http://localhost:3000](http://localhost:3000) to see your portfolio.
 
 ## ✏️ Customize Your Portfolio
 
-All your content lives in **one file**: `app/page.tsx`
+Your content is organized into multiple pages to keep things clean and easy to edit:
+- **`app/page.tsx`**: Main landing page (About Me)
+- **`app/coding/page.tsx`**: Coding & Tech Stack section
+- **`app/travel/page.tsx`**: Travel section
+- **`app/art/page.tsx`**: Art section
+- **`app/contact/page.tsx`**: Contact links
 
 ### 1. Update Your Name/Brand
-Find the navigation section and change `GITFOLIO` to your name:
+Find the navigation section in **`app/layout.tsx`** and change the title to your name:
 ```tsx
 <Link href="/">
   YOUR_NAME
 </Link>
 ```
 
-### 2. Add Your Projects
-Look for the `ProjectCard` components and update them:
+### 2. Write Your Story
+Edit the content in **`app/page.tsx`** (About Me), **`app/art/page.tsx`**, **`app/travel/page.tsx`**, and **`app/coding/page.tsx`** to tell your own story.
+
+### 3. Update Your Skills
+In **`app/coding/page.tsx`**, customize the `STACK_TRACE` and `PROTOCOLS` lists with your actual tech stack and values.
+
+### 4. Add Your Photos
+Drop your photos in the `/public` folder:
+- **`me.png`** (Your main profile photo, automatically filtered to grayscale)
+- **`paint.png`** (Art section photo)
+- **`travel.png`** (Travel section photo)
+
+### 5. Update Contact Links
+In **`app/contact/page.tsx`**, update your email and LinkedIn URLs:
 ```tsx
-<ProjectCard 
-  title="MY_PROJECT"
-  description="What this project does and why it's awesome."
-  tags={["REACT", "TYPESCRIPT", "API"]}
-  color="cyan"  // Options: cyan, fuchsia, purple, yellow
-  href="https://github.com/you/project"
-/>
-```
-
-### 3. Write Your Bio
-Find the `// ABOUT_ME` section and tell your story:
-```tsx
-<p>
-  Your developer journey goes here. What drives you? 
-  What are you passionate about building?
-</p>
-```
-
-### 4. Update Your Skills
-Customize the `STACK_TRACE` and `PROTOCOLS` lists with your actual tech stack and values.
-
-### 5. Add Your Photo
-Drop your photo in the `/public` folder as `me.png` (or update the filename in `page.tsx`).
-
-### 6. Update Social Links
-Find the footer section and add your actual social media URLs:
-```tsx
-<SocialLink href="https://github.com/YOUR_USERNAME" label="GITHUB" />
-<SocialLink href="https://linkedin.com/in/YOUR_USERNAME" label="LINKEDIN" />
-<SocialLink href="https://twitter.com/YOUR_USERNAME" label="TWITTER" />
+href="mailto:your_email@example.com"
+href="https://linkedin.com/in/YOUR_USERNAME"
 ```
 
 ---
@@ -107,10 +96,16 @@ Your site will be live at: `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME`
 ```
 ├── app/
 │   ├── page.tsx        # 👈 Main content (edit this!)
-│   ├── layout.tsx      # Root layout & metadata
+│   ├── coding/page.tsx # Coding section
+│   ├── travel/page.tsx # Travel section
+│   ├── art/page.tsx    # Art section
+│   ├── contact/page.tsx# Contact section
+│   ├── layout.tsx      # Root layout & navigation
 │   └── globals.css     # Global styles
 ├── public/
-│   └── me.png          # 👈 Your profile photo
+│   ├── me.png          # 👈 Your profile photo
+│   ├── paint.png       # Art photo
+│   └── travel.jpg     # Travel photo
 ├── .github/
 │   └── workflows/      # GitHub Pages deployment
 └── next.config.ts      # Next.js configuration
@@ -120,9 +115,9 @@ Your site will be live at: `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME`
 
 ## 🎨 Design Features
 
-- **Cyberpunk Aesthetic**: Neon cyan, fuchsia, and yellow accents on deep space background
+- **Monochrome Dark Theme**: Sleek grayscale aesthetic on a deep black background
 - **Terminal Typography**: Monospaced fonts for that coder vibe
-- **Interactive Elements**: Glowing hover effects, pulsing status indicator, smooth animations
+- **Interactive Elements**: Soft white glowing hover effects and smooth animations
 - **Responsive**: Looks great on mobile, tablet, and desktop
 - **Accessible**: Semantic HTML and proper contrast ratios
 
